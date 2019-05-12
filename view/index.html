@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Web Character</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	</head>
+
+	<body>
+		<div class="page-content">
+			<div class="row header"><h2>Header</h2></div>
+
+			<div class="content row">
+				<div class="content-side left-side col-md-4">
+					<div class="control-area">
+						<button id="appear">Appear</button>
+						<button id="hello">Hello</button>
+					</div>
+				</div>
+				<div class="content-side right-side col-md-8">
+					<div class="img-area" id="imgArea">
+						<img src="../image/back.PNG">
+					</div>
+					<div class="animation-area" id="animationArea"></div>
+					<div class="outline" id="outline">
+						<p class="string" id="string"></p>
+					</div>
+				</div>
+			</div>
+			<audio id="backSound" controls autoplay loop hidden><!-- autoplay -->
+			  	<source src="../image/back.wav" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+
+			<audio id="talkSound" controls loop hidden>
+			  	<source src="../image/talk.wav" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+
+			<div class="row footer"><h2>Footer</h2></div>
+		</div>
+		<script type="text/javascript" src="../plugin/jquery.js"></script>
+		<!-- <script type="text/javascript" src="../plugin/bootstrap.js"></script> -->
+		<script type="text/javascript" src="../plugin/Detector.js"></script>
+		<script type="text/javascript" src="../plugin/three.js"></script>
+		<!-- <script src="../plugin/TrackballControls.js"></script> -->
+		<script type="text/javascript" src="../plugin/OrbitControls.js"></script>
+		<script type="text/javascript" src="../plugin/inflate.min.js"></script>
+		<script type="text/javascript" src="../plugin/FBXLoader.js"></script>
+
+		<script type="text/javascript" src="../plugin/LoaderSupport.js"></script>
+		<script type="text/javascript">
+			var camera, scene, renderer, controls;
+			var containerWidth, containerHeight;
+			var light;
+
+			var overedMesh, raycaster = new THREE.Raycaster();
+			var totalWidth, totalHeight, offsetX, offsetY;
+
+			var clock = new THREE.Clock();
+			var models = [];
+			var mixers = [];
+			var player = [];
+
+			var appear = false, talk = false;
+			var rotateEnable = false;
+			var sphere;
+			
+		</script>
+		<script type="text/javascript" src="../custom/loader.js"></script>
+		<script type="text/javascript" src="../custom/custom.js"></script>
+	</body>
+</html>
